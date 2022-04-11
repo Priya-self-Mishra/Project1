@@ -22,7 +22,7 @@ while x==True :
     #creating table for sorting the user name and password
     cursor.execute("create table if not exists user_Details(User_Name varchar(15),User_Password varchar(8))")
     def delete(f):
-        #Deleting Selected Record
+        #Deleting Selected Record from all the tables
         cursor.execute("Delete from Project_Details where Position='"+str(f)+"'")
         cursor.execute("Delete from Contractor_Details where Position='"+str(f)+"'")
         cursor.execute("Delete from Feedback where Position='"+str(f)+"'")
