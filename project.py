@@ -23,10 +23,10 @@ while x==True :
     cursor.execute("create table if not exists user_Details(User_Name varchar(15),User_Password varchar(8))")
     def delete(f):
         #Deleting Selected Record
-        cursor.execute("Update Project_Details set Status ='Unactive' where Position='"+str(f)+"'")
-        cursor.execute("Update Contractor_Details set Status ='Unactive' where Position='"+str(f)+"'")
-        cursor.execute("Update Feedback  set Status ='Unactive' where Position='"+str(f)+"'")
-        cursor.execute("Update Source_of_Money set Status ='Unactive' where Position='"+str(f)+"'")
+        cursor.execute("Delete from Project_Details where Position='"+str(f)+"'")
+        cursor.execute("Delete from Contractor_Details where Position='"+str(f)+"'")
+        cursor.execute("Delete from Feedback where Position='"+str(f)+"'")
+        cursor.execute("Delete from Source_of_Money where Position='"+str(f)+"'")
         sql.commit()
         print("Deleted Successfully")
     while x==True:
